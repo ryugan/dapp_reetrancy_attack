@@ -1,38 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #393E45;
+  color: #D1D5DE;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height:  100vh;
 }
 
-.App-link {
-  color: #61dafb;
+h2 {
+  margin-top: 2rem;
+  font-weight: 400;
+  font-size: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 .address {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+    font-style: italic;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+input {
+  border: 0;
+  height: 2rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+button {
+  height: 2rem;
+  border: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  background: #D1D5DE;
+  color: #393E45;
+}
+
+button:disabled,
+button[disabled]{
+  background-color: #cccccc;
+  color: #807d7d;
+}
+
+.setVictim {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.attack {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.error, .success {
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+.error {
+  background: #ee3312;
+  color: #393E45;
+}
+
+.success {
+  background: #53814D;
+  color: #393E45;
 }

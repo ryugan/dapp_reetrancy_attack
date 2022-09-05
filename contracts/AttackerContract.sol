@@ -6,14 +6,17 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract AttackerContract is Ownable {
 
-  IVictimContract private immutable victimContract;
-  address payable private attackerAddress;
-  address private contractAddress;
+  IVictimContract private victimContract;
+  address payable private immutable attackerAddress;
+  address private immutable contractAddress;
 
-  constructor(address _victimContractAddress) {
-    victimContract = IVictimContract(_victimContractAddress);
+  constructor() {
     attackerAddress = payable(owner());
     contractAddress = address(this);
+  }
+
+  function setVictimContract(address _victimContractAddress) external {
+    victimContract = IVictimContract(_victimContractAddress);
   }
 
   function attack() external payable onlyOwner {
